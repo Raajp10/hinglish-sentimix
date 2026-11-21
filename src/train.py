@@ -88,7 +88,7 @@ def train(model_name: str, lr: float, epochs: int, seed: int, normalize: bool = 
     opt = torch.optim.AdamW(params, lr=lr)
     steps = len(tr_dl) * epochs
     sched = get_linear_schedule_with_warmup(opt, int(warmup * steps), steps)
-    scaler = torch.amp.GradScaler("cuda", enabled=amp)
+    scaler = torch.cuda.amp.GradScaler(enabled=amp)  # works on all torch 2.x
 
     history = []
     t0 = time.time()
