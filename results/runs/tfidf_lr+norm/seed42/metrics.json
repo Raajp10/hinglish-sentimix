@@ -1,0 +1,36 @@
+{
+  "val": {
+    "weighted_f1": 0.6148640606017343,
+    "macro_f1": 0.6211608418382987,
+    "accuracy": 0.6203333333333333,
+    "f1_negative": 0.6618705035971223,
+    "f1_neutral": 0.5174275895925381,
+    "f1_positive": 0.6841844323252355,
+    "precision_negative": 0.6098484848484849,
+    "precision_neutral": 0.5797579757975797,
+    "precision_positive": 0.6666666666666666,
+    "recall_negative": 0.7235955056179775,
+    "recall_neutral": 0.4671985815602837,
+    "recall_positive": 0.7026476578411406
+  },
+  "test": {
+    "weighted_f1": 0.684195132658108,
+    "macro_f1": 0.6886126646710409,
+    "accuracy": 0.686,
+    "f1_negative": 0.730259671436142,
+    "f1_neutral": 0.5977337110481586,
+    "f1_positive": 0.7378446115288221,
+    "precision_negative": 0.6980749746707193,
+    "precision_neutral": 0.6218074656188605,
+    "precision_positive": 0.7396984924623116,
+    "recall_negative": 0.7655555555555555,
+    "recall_neutral": 0.5754545454545454,
+    "recall_positive": 0.736
+  },
+  "config": {
+    "model": "tfidf_lr",
+    "C": 0.5,
+    "normalize": true,
+    "seed": 42
+  }
+}

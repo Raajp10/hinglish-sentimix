@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+results/models/
+results/tiny_bert/
+results/runs/tiny_bert*/
+results/sweep/tiny_bert.json
+.venv/

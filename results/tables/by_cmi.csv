@@ -1,0 +1,9 @@
+tag,bucket,weighted_f1,std,n
+tfidf_lr,mono (0),66.67475576509571,,195
+tfidf_lr,low (0-20],66.19510364503634,,1296
+tfidf_lr,medium (20-35],69.31777105140256,,865
+tfidf_lr,high (>35),69.82888337569185,,644
+tfidf_lr+norm,mono (0),69.62451703547595,,195
+tfidf_lr+norm,low (0-20],66.3130446543578,,1296
+tfidf_lr+norm,medium (20-35],69.50962136615651,,865
+tfidf_lr+norm,high (>35),70.3259831774052,,644

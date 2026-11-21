@@ -1,0 +1,78 @@
+{
+  "raw": {
+    "train": 15130,
+    "val": 3000,
+    "test": 3000
+  },
+  "dropped_bad_label": {
+    "train": 0,
+    "val": 0,
+    "test": 0
+  },
+  "train_removed_overlap_with_val_test": 2783,
+  "train_removed_internal_duplicates": 132,
+  "final": {
+    "train": 12204,
+    "val": 3000,
+    "test": 3000
+  },
+  "label_dist": {
+    "train": {
+      "neutral": 4561,
+      "positive": 4053,
+      "negative": 3590
+    },
+    "val": {
+      "neutral": 1128,
+      "positive": 982,
+      "negative": 890
+    },
+    "test": {
+      "neutral": 1100,
+      "positive": 1000,
+      "negative": 900
+    }
+  },
+  "cmi_dist": {
+    "train": {
+      "low (0-20]": 5267,
+      "medium (20-35]": 3544,
+      "high (>35)": 2557,
+      "mono (0)": 836
+    },
+    "val": {
+      "low (0-20]": 1246,
+      "medium (20-35]": 883,
+      "high (>35)": 670,
+      "mono (0)": 201
+    },
+    "test": {
+      "low (0-20]": 1296,
+      "medium (20-35]": 865,
+      "high (>35)": 644,
+      "mono (0)": 195
+    }
+  },
+  "len_dist": {
+    "train": {
+      "medium (11-20)": 6230,
+      "long (>20)": 4937,
+      "short (<=10)": 1037
+    },
+    "val": {
+      "medium (11-20)": 1505,
+      "long (>20)": 1222,
+      "short (<=10)": 273
+    },
+    "test": {
+      "medium (11-20)": 1500,
+      "long (>20)": 1237,
+      "short (<=10)": 263
+    }
+  },
+  "mean_cmi": {
+    "train": 22.1,
+    "val": 22.43,
+    "test": 22.17
+  }
+}

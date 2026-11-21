@@ -1,0 +1,7 @@
+tag,bucket,weighted_f1,std,n
+tfidf_lr,short (<=10),73.43471791649195,,263
+tfidf_lr,medium (11-20),70.05530839760232,,1500
+tfidf_lr,long (>20),64.3380518130983,,1237
+tfidf_lr+norm,short (<=10),73.43477643857872,,263
+tfidf_lr+norm,medium (11-20),70.67694235328594,,1500
+tfidf_lr+norm,long (>20),64.56894382359802,,1237

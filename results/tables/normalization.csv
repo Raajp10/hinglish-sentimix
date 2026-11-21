@@ -1,0 +1,2 @@
+model,wF1_without,wF1_with_norm,delta,bootstrap_95ci_low,bootstrap_95ci_high,p_delta_le_0
+TF-IDF + LR,68.02,68.42,0.4,-0.24,1.04,0.125

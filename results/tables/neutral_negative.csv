@@ -1,0 +1,3 @@
+model,tag,neg_predicted_as_neu,neu_predicted_as_neg,neg_predicted_as_pos,pos_predicted_as_neg,neu_predicted_as_pos,pos_predicted_as_neu
+TF-IDF + LR,tfidf_lr,0.192,0.235,0.044,0.045,0.201,0.215
+TF-IDF + LR + norm,tfidf_lr+norm,0.187,0.228,0.048,0.047,0.196,0.217
