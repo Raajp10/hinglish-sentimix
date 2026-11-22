@@ -24,6 +24,17 @@
    - figures/confusion_matrices.png + tables/neutral_negative.csv — neutral↔negative confusion.
    - Manual review: tables/error_categories.csv + figures/error_categories.png; 3–4 quoted examples.
 8. **Normalization experiment**: tables/normalization.csv (Δ, CI). Honest interpretation (subword tokenizers already absorb much variation?).
+8b. **Our own Hinglish BERT** (continued MLM pre-training of mBERT; `src/mlm_pretrain.py`, `notebooks/run_ourbert.ipynb`)
+   - Setup: base mBERT, MLM 15%, max_len 96, bs 64, lr 5e-5, 3 epochs; corpus sizes and decontamination
+     counts from `results/pretrained/<name>/pretrain_info.json`.
+   - MLM perplexity before → after on held-out corpus and on SentiMix val text (same file).
+   - Fine-tuned test weighted F1 (3 seeds) in one table: mBERT → ourbert-tapt → ourbert → HingMBERT
+     (L3Cube, 52.9M tweets) → HingBERT.
+   - Interpretation: how much of the mBERT→HingBERT gap does each step close?
+     Gap closed = (ours − mBERT) / (HingMBERT − mBERT).
+   - Notes: HingLID is CC BY-NC-SA 4.0 (course use OK). 348 SentiMix train tweets share an 8-gram with
+     val/test (near-duplicates/retweets); they are excluded from the MLM corpus. Mention as a limitation
+     of the classification split too.
 9. **Recommendation**: which model for Hinglish in practice, and why (accuracy, robustness to mixing, size).
 10. **Limitations & future work**: single dataset (tweets, political domain), label noise, 3 seeds, no adversarial training, no LLM comparison.
 11. **Contributions**: Member 1 — fine-tuning, tuning, results table. Member 2 — data pipeline, CMI, baseline, normalization, manual review. Both — report.

@@ -1,4 +1,7 @@
-"""Model registry: short name -> HuggingFace id + per-model tokenizer kwargs."""
+"""Model registry: short name -> HuggingFace id (or local path) + tokenizer kwargs."""
+from pathlib import Path
+
+_PRETRAINED = Path(__file__).resolve().parents[1] / "results" / "pretrained"
 
 MODELS = {
     "mbert": {"hf": "bert-base-multilingual-cased", "tok": {}},
@@ -11,6 +14,11 @@ MODELS = {
     # Optional extras (not in the proposal, cheap to add if time allows):
     "hingroberta": {"hf": "l3cube-pune/hing-roberta", "tok": {}},
     "muril": {"hf": "google/muril-base-cased", "tok": {}},
+    # L3Cube's mBERT continued-pretrained on the full HingCorpus: reference for our model.
+    "hingmbert": {"hf": "l3cube-pune/hing-mbert", "tok": {}},
+    # OUR models (built by src/mlm_pretrain.py, local paths):
+    "ourbert": {"hf": str(_PRETRAINED / "ourbert"), "tok": {}},            # mBERT + Hinglish MLM
+    "ourbert-tapt": {"hf": str(_PRETRAINED / "ourbert-tapt"), "tok": {}},  # mBERT + MLM on train tweets only
 }
 
 CORE = ["mbert", "xlmr", "indicbert", "hingbert"]

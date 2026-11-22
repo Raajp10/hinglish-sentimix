@@ -9,6 +9,10 @@ The proposal is the spec. Do not add scope beyond it unless asked.
 2. Best model ≥ 70% weighted F1 (official mBERT baseline 65.4, best system 75.0). Report honestly either way.
 3. Error analysis: slice by Code-Mixing Index, length, class (esp. neutral vs negative); manual review of ~100 errors.
 4. One improvement: spelling normalization (nhi/nahin → nahi) on the weakest transformer, with vs without.
+5. Extension: our own Hinglish BERT — mBERT + continued MLM pre-training (`src/mlm_pretrain.py`;
+   ourbert-tapt: train tweets only; ourbert: train + L3Cube-HingLID), compared with HingBERT and
+   L3Cube's HingMBERT. Question: does Romanized-Hinglish pre-training explain HingBERT's lead?
+   Runner: `notebooks/run_ourbert.ipynb`. Report section 8b.
 Deliverables: GitHub repo (reproducible), results table, error-analysis charts, final report, slides. Optional Gradio demo.
 
 ## Layout
@@ -52,6 +56,7 @@ python scripts/make_tiny_model.py && python -m src.train --model results/tiny_be
 - Keep the leakage fix in `prepare.py`: the released train file contains ~2.7k tweets that also appear
   in val. They are removed from train (final: 12,204 train / 3,000 val / 3,000 test). Mention this in the report.
 - Don't commit model weights (`results/models/` is gitignored). Commit `results/runs`, `tables`, `figures`.
+- MLM corpus never contains val/test text (exact or 8-gram overlap is dropped).
 - Seeds: 42, 43, 44. Report mean ± std.
 - Use `python -m src.<module>` from the repo root (package imports).
 

@@ -29,9 +29,11 @@ from src.prepare import CMI_BUCKETS, LEN_BUCKETS  # noqa: E402
 OUT = ROOT / "results"
 TAB, FIG, ERR = OUT / "tables", OUT / "figures", OUT / "error_review"
 # Fixed display order -> fixed color per model (color follows the entity).
-ORDER = ["tfidf_lr", "mbert", "xlmr", "indicbert", "hingbert", "hingroberta", "muril"]
+ORDER = ["tfidf_lr", "mbert", "xlmr", "indicbert", "hingbert", "ourbert-tapt", "ourbert", "hingmbert",
+         "hingroberta", "muril"]
 PRETTY = {"tfidf_lr": "TF-IDF + LR", "mbert": "mBERT", "xlmr": "XLM-R", "indicbert": "IndicBERT",
-          "hingbert": "HingBERT", "hingroberta": "HingRoBERTa", "muril": "MuRIL"}
+          "hingbert": "HingBERT", "ourbert-tapt": "Ours: mBERT+TAPT", "ourbert": "Ours: mBERT+Hinglish MLM",
+          "hingmbert": "HingMBERT (L3Cube)", "hingroberta": "HingRoBERTa", "muril": "MuRIL"}
 PALETTE = ["#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4", "#008300", "#6250d6", "#e34948"]
 INK, MUTED, GRID = "#2b2b2a", "#6b6b66", "#e6e5e0"
 ERROR_CATEGORIES = ["sarcasm/irony", "non-standard spelling", "heavy code-mixing",
